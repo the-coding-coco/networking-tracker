@@ -1,5 +1,5 @@
 # About this project
-- Easy and intuitive way to manage companies, contacts, and interactions compared to spreadsheets.
+Easy and intuitive way to manage companies, contacts, and interactions compared to spreadsheets. Developed with MBA students in mind but could be applied to other situations.
 # Design goals
 - **Easy to use**: Intelligently combine information; no need to type duplicate company or personal information across entries.
 - **No centralized database**: User stores their data on their own Google Drive in the form of Google Sheet files. Minimum costs, maximum privacy.
