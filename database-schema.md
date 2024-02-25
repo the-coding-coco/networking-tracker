@@ -1,31 +1,32 @@
 ```mermaid
 erDiagram
-    entity Person {
-        person_id INT PRIMARY KEY
-        name VARCHAR(255) NOT NULL
+    Person {
+        person_id INT
+        name VARCHAR(255)
         title VARCHAR(255)
         position_start_date DATE
         position_end_date DATE
     }
-    entity Organization {
-        organization_id INT PRIMARY KEY
-        name VARCHAR(255) NOT NULL
+    Organization {
+        organization_id INT
+        name VARCHAR(255)
         type VARCHAR(255)
     }
-    entity Position {
-        position_id INT PRIMARY KEY
-        title VARCHAR(255) NOT NULL
+    Position {
+        position_id INT
+        title VARCHAR(255)
     }
-    entity Interaction {
-        interaction_id INT PRIMARY KEY
+    Interaction {
+        interaction_id INT
         occasion VARCHAR(255)
         date DATE
         location VARCHAR(255)
-        person_id INT FOREIGN KEY REFERENCES Person(person_id)
-        position_id INT FOREIGN KEY REFERENCES Position(position_id)
+        person_id INT
+        position_id INT
     }
-    Person RELATES TO Organization(1..N) TO MANY Organization
-    Person RELATES TO Position(1..N) TO MANY Position
-    Person RELATES TO Interaction(1..N) TO MANY Interaction
-    Position RELATES TO Interaction(1..N) TO MANY Interaction
+
+    Person ||--o{ Organization : works_for
+    Person ||--o{ Position : holds
+    Person ||--o{ Interaction : involved_in
+    Position ||--o{ Interaction : associated_with
 ```
