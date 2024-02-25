@@ -28,11 +28,11 @@ erDiagram
         organization_id INT
         organization_name VARCHAR(255)
         organization_type VARCHAR(255)
-        organization_webstie VARCHAR(255)
+        organization_website VARCHAR(255)
     }
 
-    interaction_details }|--|{ interaction_participants : interaction_id
-    interaction_participants }|--|{ careers : career_id
-    careers }|--|| people : person_id
-    careers }|--|{ organizations : organization_id
+    interaction_details }|--|{ interaction_participants : "interaction_id"
+    interaction_participants }|--|{ careers : "career_id"
+    careers }|--|| people : "person_id"
+    careers }|--|{ organizations : "organization_id"
 ```
