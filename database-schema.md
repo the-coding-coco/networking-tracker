@@ -1,3 +1,5 @@
+ &copy; Created and maintained by coco.lin at chicagobooth.edu
+
 ```mermaid
 erDiagram
     interaction_details {
