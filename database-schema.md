@@ -15,8 +15,7 @@ erDiagram
         person_id INT
         career_id INT
         organization_id INT
-        name VARCHAR(255)
-        title VARCHAR(255)
+        position_title VARCHAR(255)
         position_start_date DATE
         position_end_date DATE
     }
@@ -29,6 +28,7 @@ erDiagram
         organization_id INT
         organization_name VARCHAR(255)
         organization_type VARCHAR(255)
+        organization_webstie VARCHAR(255)
     }
 
     interaction_details }|--|{ interaction_participants : interaction_id
