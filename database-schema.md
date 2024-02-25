@@ -1,3 +1,4 @@
+```mermaid
 erDiagram
     entity Person {
         person_id INT PRIMARY KEY
@@ -27,3 +28,4 @@ erDiagram
     Person RELATES TO Position(1..N) TO MANY Position
     Person RELATES TO Interaction(1..N) TO MANY Interaction
     Position RELATES TO Interaction(1..N) TO MANY Interaction
+```
